@@ -1,0 +1,70 @@
+<div class="card">
+    <!-- Header -->
+    <div class="card-header">
+      <h2 class="card-title">Wealth</h2>
+    </div>
+  
+    <!-- Content -->
+    <div class="card-content">
+      <div class="space-y-6">
+        <!-- Top stats grid -->
+        <div class="stats-grid">
+          <div class="stats-item">
+            <div class="stats-icon-label">
+              <!--lucide-wallet class="icon icon-primary"></lucide-wallet-->
+              <span class="stats-label">External Assets</span>
+            </div>
+            <div class="stats-value">CHF 21.5M</div>
+          </div>
+          <div class="stats-item">
+            <div class="stats-icon-label">
+              <!--lucide-building class="icon icon-primary"></lucide-building-->
+              <span class="stats-label">In-house Assets</span>
+            </div>
+            <div class="stats-value">CHF 7M</div>
+          </div>
+        </div>
+  
+        <!-- Allocation breakdown -->
+        <div>
+          <div class="allocation-label">Asset Allocation</div>
+          <div class="allocation-list">
+            <div class="allocation-item">
+              <div class="allocation-key">Cash</div>
+              <div class="allocation-bar">
+                <div class="allocation-fill" [style.width.%]="20"></div>
+              </div>
+              <div class="allocation-percent">20%</div>
+            </div>
+            <div class="allocation-item">
+                <div class="allocation-key">Equities</div>
+                <div class="allocation-bar">
+                  <div class="allocation-fill" [style.width.%]="60"></div>
+                </div>
+                <div class="allocation-percent">60%</div>
+              </div>
+              <div class="allocation-item">
+                <div class="allocation-key">Bonds</div>
+                <div class="allocation-bar">
+                  <div class="allocation-fill" [style.width.%]="40"></div>
+                </div>
+                <div class="allocation-percent">40%</div>
+              </div>
+              <div class="allocation-item">
+                <div class="allocation-key">Real Estate</div>
+                <div class="allocation-bar">
+                  <div class="allocation-fill" [style.width.%]="30"></div>
+                </div>
+                <div class="allocation-percent">30%</div>
+              </div>
+              <div class="allocation-item">
+                <div class="allocation-key">Commodities</div>
+                <div class="allocation-bar">
+                  <div class="allocation-fill" [style.width.%]="10"></div>
+                </div>
+                <div class="allocation-percent">10%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

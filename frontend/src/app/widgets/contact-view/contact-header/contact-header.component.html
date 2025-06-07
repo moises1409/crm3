@@ -1,0 +1,30 @@
+<div class="contact-list-container">
+    <div class="title-card">
+      <div class="contact-name-container">
+        <span class="material-icons person-icon">person</span>
+        <h2>{{ contact.firstName }} {{ contact.lastName }}</h2>
+      </div>
+      <div class="contact-header-grid">
+        <div class="header-grid-item">
+          <div class="header-grid-label">Segment</div>
+          <div class="header-grid-value">{{ contact.clientSegment }}</div>
+        </div>
+        <div class="header-grid-item">
+          <div class="header-grid-label">Category</div>
+          <div class="header-grid-value">{{ contact.category }}</div>
+        </div>
+        <div class="header-grid-item">
+          <div class="header-grid-label">Domicile</div>
+          <div class="header-grid-value">{{ contact.country }}</div>
+        </div>
+        <div class="header-grid-item">
+          <div class="header-grid-label">Total AuM</div>
+          <div class="header-grid-value">{{ contact.totalAum }}</div>
+        </div>
+        <div class="header-grid-item">
+          <div class="header-grid-label">Last Interaction</div>
+          <div class="header-grid-value">{{ contact.last_interaction }}</div>
+        </div>
+      </div>
+    </div>
+  </div>

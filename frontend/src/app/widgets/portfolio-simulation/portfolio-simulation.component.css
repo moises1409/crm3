@@ -1,0 +1,132 @@
+.dashboard-card {
+  background: #343333;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px #0001;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.card-header {
+  margin-bottom: 1rem;
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.card-description {
+  color: #717070;
+  font-size: 0.95rem;
+}
+
+.card-content {
+  margin-top: 0.5rem;
+}
+
+.grid-cols-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.accent-container {
+  background: #565656;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  min-height: 150px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.9rem;
+}
+.icon {
+  height: 1.1rem;
+  width: 1.1rem;
+  margin-right: 0.5rem;
+}
+.buying-icon {
+  stroke: hsl(155, 80%, 35%);
+  fill: none;
+  stroke-width: 2;
+}
+.selling-icon {
+  stroke: hsl(355, 90%, 60%);
+  fill: none;
+  stroke-width: 2;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.text-sm {
+  font-size: 0.93em;
+}
+.text-muted-foreground {
+  color: #888;
+}
+
+.investment-list, .sell-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+.allocation-badge {
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 0.87em;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  padding: 0.18em 0.80em;
+}
+.proceeds-value {
+  font-size: 0.9em;
+}
+.proceeds-total {
+  padding-top: 0.4rem;
+  border-top: 1px solid #ddd;
+  margin-top: 0.8rem;
+}
+
+.impact-panel {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #565656;
+  
+  border-radius: 0.75rem;
+}
+.impact-title {
+  color: #edeff1;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.impact-arrow {
+  stroke: #edeff1;
+  fill: none;
+  stroke-width: 2;
+  margin-right: 0.5rem;
+}
+.impact-desc {
+  color: #edeff1;
+  font-size: 0.97em;
+}

@@ -1,0 +1,57 @@
+<div class="header-container">
+  <app-header [userName]="userName" [avatarUrl]="avatarUrl"></app-header>
+</div>
+<div class="container">
+  <div class="main-content">
+    <!-- Main content goes here -->
+    <!-- <h2>Voice Assistant</h2> -->
+    
+    <div *ngIf="showInvestmentsRecommendationsWidget">
+      <app-investment-recommendations [recommendations]="investmentRecommendations" [preferences]="preferences"></app-investment-recommendations>
+    </div>
+    <div *ngIf="showPortfolioAnalysisWidget">
+      <app-portfolio-analysis [portfolio]="portfolio" [benchmark]="benchmark"></app-portfolio-analysis>
+    </div>
+    <div *ngIf="showSellRecommendationsWidget">
+      <app-sell-recommendations [positions]="positions_to_sell"></app-sell-recommendations>
+    </div>
+    <div *ngIf="showPortfolioSimulationWidget">
+      <app-portfolio-simulation 
+        [recommendations]="investmentRecommendations"
+        [positions]="positions_to_sell"
+        [portfolio]="portfolio"
+        [benchmark]="benchmark" 
+        [simulation]="simulation">
+      </app-portfolio-simulation>
+    </div>
+    <div *ngIf="loading" class="spinner-container">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <div class="sidebar" *ngIf="isSidebarOpen">
+    <!--app-sidebar
+      [transcriptions]="getSortedTranscriptions()"
+      [getSpeakerLabel]="getSpeakerLabel"
+      (disconnect)="disconnect()"
+    ></app-sidebar-->
+    
+    <app-text-chat 
+    (loadingChange)="loading = $event"
+    (showPortfolioSimulationWidgetChange)="showPortfolioSimulationWidget = $event"
+    (simulationChange)="simulation = $event"
+    (showPortfolioAnalysisWidgetChange)="showPortfolioAnalysisWidget = $event"
+    (portfolioChange)="portfolio = $event"
+    (benchmarkChange)="benchmark = $event"
+    (showInvestmentRecommendationsWidgetChange)="showInvestmentsRecommendationsWidget = $event"
+    (investmentRecommendationsChange)="investmentRecommendations = $event"
+    (preferencesChange)="preferences = $event"
+    (showSellRecommendationsWidgetChange)="showSellRecommendationsWidget = $event"
+    (positions_to_sellChange)="positions_to_sell = $event"
+    ></app-text-chat>
+    
+      
+      
+  </div>
+  <button *ngIf="!isSidebarOpen" class="connect-btn" (click)="connectTextChat()">Connect</button>
+</div>

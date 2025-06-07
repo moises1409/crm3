@@ -1,0 +1,139 @@
+.card {
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Header */
+  .card-header {
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .card-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Content */
+  .card-content {
+    padding: 16px;
+  }
+  
+  /* Opportunity list */
+  .opportunity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Single item */
+  .opportunity-item {
+    padding-bottom: 16px;
+  }
+  .separator {
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+    margin: 16px 0 0 0;
+  }
+  
+  /* Title + badge */
+  .opp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .opp-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  /* Badge base */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 12px;
+    border: 1px solid transparent;
+  }
+  
+  /* Badge variants */
+  .badge-new {
+    background: #ebf8ff;
+    color: #3182ce;
+    border-color: #bee3f8;
+  }
+  .badge-in-progress {
+    background: #f3e8ff;
+    color: #7c3aed;
+    border-color: #d8b4fe;
+  }
+  .badge-proposed {
+    background: #fffbeb;
+    color: #d97706;
+    border-color: #fde68a;
+  }
+  .badge-won {
+    background: #ecfdf5;
+    color: #047857;
+    border-color: #a7f3d0;
+  }
+  .badge-lost {
+    background: #fef2f2;
+    color: #b91c1c;
+    border-color: #fecaca;
+  }
+  .badge-default {
+    background: #f7fafc;
+    color: #4a5568;
+    border-color: #e2e8f0;
+  }
+  
+  /* Description */
+  .opp-desc {
+    margin: 8px 0;
+    font-size: 0.875rem;
+    color: #4a5568;
+  }
+  
+  /* Meta row */
+  .opp-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #718096;
+  }
+  .due-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .icon-calendar {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+  }
+  
+  /* Next steps */
+  .next-steps {
+    margin-top: 12px;
+    padding: 12px;
+    background: #2f2d2d;
+    border-radius: 4px;
+  }
+  .next-steps-title {
+    margin: 0 0 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .next-steps p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #cacfda;
+  }

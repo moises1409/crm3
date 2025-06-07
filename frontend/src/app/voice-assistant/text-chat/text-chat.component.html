@@ -1,0 +1,53 @@
+<div class="chat-card">
+  <div class="chat-header">
+    <span class="iconify chat-header-icon" data-icon="lucide:message-square"></span>
+    <span class="chat-title">Portfolio Assistant</span>
+  </div>
+  <div class="chat-content" #scrollContainer>
+    <div class="chat-messages">
+      <div *ngFor="let msg of messages" [class.user]="msg.sender === 'user'" class="chat-message-row">
+        <div [ngClass]="{'user-bubble': msg.sender === 'user', 'assistant-bubble': msg.sender === 'assistant'}"
+             class="chat-bubble">
+          <div class="chat-meta">
+            <span class="iconify" [attr.data-icon]="msg.sender === 'assistant' ? 'lucide:message-square' : 'lucide:user'"></span>
+            <span class="chat-sender">
+              {{ msg.sender === 'user' ? 'You' : (msg.content === '' ? 'Assistant Working...' : 'Assistant') }}
+            </span>
+          </div>
+          <p class="chat-text">{{ msg.content }}</p>
+          <div *ngIf="msg.sender === 'assistant' && msg.next_action?.length" class="chat-actions">
+            <button
+              *ngFor="let action of msg.next_action"
+              class="chat-action-btn"
+              (click)="handleAssistantAction(action)"
+            >
+              {{ action }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <input
+      type="text"
+      class="chat-input"
+      placeholder="Ask about the portfolio..."
+      [(ngModel)]="newMessage"
+      (keydown)="handleKeyDown($event)"
+    />
+    <button
+      class="chat-send-btn"
+      type="button"
+      [disabled]="!newMessage.trim()"
+      (click)="handleSendMessage()"
+    >
+      <span class="iconify" data-icon="lucide:send"></span>
+      <span class="sr-only">Send message</span>
+    </button>
+  </div>
+</div>
+<!--button class="disconnect-btn" (click)="onDisconnect()">Disconnect</button-->
+
+
+

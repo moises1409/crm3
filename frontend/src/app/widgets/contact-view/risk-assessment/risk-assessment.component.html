@@ -1,0 +1,71 @@
+<div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Main KPIs</h2>
+     
+    </div>
+  
+    <div class="card-content">
+      <div class="overview">
+        <!-- Retention Rate Section -->
+        <div class="churn-header">
+          <svg *ngIf="retentionRate > 50" class="icon check" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+          <svg *ngIf="retentionRate <= 50" class="icon x" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M15 9l-6 6M9 9l6 6"/>
+          </svg>
+          <span class="churn-text">
+            Retention Rate: {{ retentionRate }}%
+          </span>
+        </div>
+  
+        <!-- Churn factors -->
+        <div class="factors">
+          <div *ngFor="let risk of risks">
+            <div class="factor" *ngIf="risk.status === 'risk'">
+              <div class="factor-info">
+                <div class="factor-name">{{ risk.factor }}</div>
+                <div class="factor-detail">{{ risk.detail }}</div>
+              </div>          
+              
+              <button class="cta-btn small">{{ risk.mitigation }}</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-content">
+        <div class="overview">
+          <!-- Engagement Section -->
+          <div class="churn-header">    
+            <svg *ngIf="engagementRate > 50" class="icon check" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <svg *ngIf="engagementRate <= 50" class="icon x" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M15 9l-6 6M9 9l6 6"/>
+            </svg>
+            <span class="churn-text">
+              Engagement Rate: {{ engagementRate }}%
+            </span>
+          </div>
+    
+          <!-- Churn factors -->
+          <div class="factors">
+            <div *ngFor="let item of risks">
+              <div class="factor" *ngIf="item.status === 'engagement'">
+                <div class="factor-info">
+                  <div class="factor-name">{{ item.factor }}</div>
+                  <div class="factor-detail">{{ item.detail }}</div>
+                </div>
+                <button class="cta-btn small">{{ item.mitigation }}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

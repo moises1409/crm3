@@ -1,0 +1,103 @@
+.card {
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-header {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  /* Goals list */
+  .goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  /* Individual goal */
+  .goal-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Title + status */
+  .goal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+  .goal-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .goal-status {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .status-on-track {
+    color: #16a34a;   /* green-600 */
+  }
+  
+  .status-at-risk {
+    color: #d97706;   /* amber-500 */
+  }
+  
+  .status-off-track {
+    color: #dc2626;   /* red-600 */
+  }
+  
+  /* Target + date */
+  .goal-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #6b7280;   /* gray-500 */
+  }
+  
+  /* Progress bar */
+  .goal-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background: #e5e7eb;  /* gray-200 */
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    background: #3b82f6;  /* blue-500 */
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #6b7280;       /* gray-500 */
+  }
+  

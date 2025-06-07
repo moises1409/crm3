@@ -1,0 +1,69 @@
+/* 1) Bring in the Material Icons font */
+/* 3.1) Make the header a flex row */
+.va-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  height: 64px;           /* fixed height */
+  padding: 0 24px;        /* horizontal padding */
+  background-color: black;
+  color: #fff;
+  display: flex;                 /* <-- be sure this is here */
+  flex-direction: row;           /* default but explicit */
+  justify-content: space-between;/* push left/right apart */
+  align-items: center;           /* vertical centering */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  z-index: 1000;
+  overflow-x: hidden;
+}
+
+/* 3.2) Left block (avatar + name) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  background: #fff;
+  color: #2980d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.user-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* 3.3) Right block (bell) */
+.header-right {
+  display: flex;        /* ensure it's a flex item, though not strictly needed */
+  align-items: center;
+}
+
+.notification-bell {
+  cursor: pointer;
+}
+
+.notification-bell .material-icons {
+  font-size: 28px;
+  transition: color 0.2s;
+  color: #fff;
+}
+
+.notification-bell:hover .material-icons {
+  color: #ffd700;
+}
+

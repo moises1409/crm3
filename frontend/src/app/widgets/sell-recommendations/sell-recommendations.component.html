@@ -1,0 +1,50 @@
+<div class="dashboard-card">
+  <div class="card-header">
+    <div class="card-title">Positions recommended to sell</div>
+    <div class="card-description">Instruments to consider for portfolio adjustment</div>
+  </div>
+  <div class="card-content">
+    <div class="overflow-x-auto">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Asset Class</th>
+            <th>Industry</th>
+            <th>Curreny</th>
+            <th class="text-right">Current Price</th>
+            <th class="text-right">Target Price</th>
+            <th>Recommendation</th>
+            <th>Select</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let position of positions">
+            <td>{{position.name}}</td>
+            <td>{{position.asset_class}}</td>
+            <td>{{position.industry}}</td>
+            <td>{{position.currency}}</td>
+            <td class="text-right">${{position.currentPrice.toFixed(2)}}</td>
+            <td class="text-right">${{position.targetPrice.toFixed(2)}}</td>
+        
+            <td>
+              <div class="flex flex-col gap-1">
+                <span [ngClass]="getRecommendationBadge(position.recommendation)">
+                  {{position.recommendation}}
+                </span>
+                <!--span class="text-xs text-muted-foreground">{{item.reasoning}}</span-->
+              </div>
+            </td>
+            <td>
+              <button 
+                [ngClass]="position.selection ? 'selected-btn' : 'select-btn'"
+                (click)="toggleSelection(position)">
+                {{ position.selection ? 'Selected' : 'Select' }}
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

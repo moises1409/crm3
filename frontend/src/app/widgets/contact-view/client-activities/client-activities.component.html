@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Recent Interactions</h2>
+    </div>
+  
+    <div class="card-content interactions-content">
+      <div
+        *ngFor="let activity of activities"
+        class="interaction-item"
+      >
+        <!-- Timeline line -->
+        <div class="timeline-line"></div>
+        <!-- Timeline dot -->
+        <div class="timeline-dot"></div>
+  
+        <div class="interaction-body">
+          <div class="interaction-header">
+            <div class="date">
+              <!-- Calendar icon -->
+              <svg class="icon-calendar" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 4h18M8 2v4M16 2v4M3 8h18v13H3z"/>
+              </svg>
+              <span>{{ formatDate(activity.date) }}</span>
+            </div>
+            <div class="interaction-type">{{ activity.type }}</div>
+          </div>
+  
+          <p class="interaction-summary">{{ activity.summary }}</p>
+  
+          <div *ngIf="activity.documents?.length" class="interaction-docs">
+            <div class="doc-item" *ngFor="let doc of activity.documents">
+              <!-- File text icon -->
+              <svg class="icon-file-text" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <line x1="10" y1="9" x2="8" y2="9"/>
+              </svg>
+              <span>{{ doc }}</span>
+            </div>
+          </div>
+  
+          <div *ngIf="activity.followUpRequired" class="follow-up">
+            Follow‑up required
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

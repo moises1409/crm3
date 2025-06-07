@@ -1,0 +1,61 @@
+.connect-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: #6487ee;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.connect-btn:hover {
+  background-color: #7a98f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 64px;
+  position: relative;
+  
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding: 2rem;
+}
+
+.sidebar {
+  width: 400px;
+  
+  box-shadow: -2px 0 5px rgba(0,0,0,0.05);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add to text-chat.component.css */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+.spinner {
+  border: 4px solid #eee;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

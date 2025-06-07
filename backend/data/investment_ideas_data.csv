@@ -1,0 +1,33 @@
+id;title;description;asset_class;currency;duration;industry;added
+1;Global Green Infrastructure Bond;Bonds financing low-carbon transport & grid upgrades worldwide;Bonds;USD;Long-Term;Renewable Energy / Infrastructure;false
+2;Eurozone Sovereign Inflation-Linked Bond;Government bonds indexed to inflation to protect purchasing power;Bonds;EUR;Medium-Term;Fixed Income;false
+3;Emerging Market Local-Currency Corporate Bond Fund;High-yield corporate debt issued in local EM currencies;Bonds;Local;Medium-Term;Corporate Credit;false
+4;Japan High-Grade Corporate Green Bond;Investment-grade bonds funding green projects in Japan;Bonds;JPY;Long-Term;ESG / Corporate;false
+5;USD-Denominated African Development Bond;Sovereign and supranational bonds to fund infrastructure in Africa;Bonds;USD;Long-Term;Development / Infrastructure;false
+6;Swiss Franc AAA Municipal Bond;CHF-denominated bonds issued by top-rated Swiss cantons;Bonds;CHF;Medium-Term;Municipal Finance;false
+7;U.S. Cloud-Computing Growth Stock;Equity stake in leading U.S. cloud-services providers;Equities;USD;Long-Term;Cloud Computing;false
+8;China Electric Vehicle Champion Equity;Shares in top Chinese EV manufacturers and battery makers;Equities;CNY;Long-Term;Automotive / Clean Tech;false
+9;Indian Digital Payments Innovators;Fast-growing fintech firms enabling UPI & mobile wallets;Equities;INR;Long-Term;Fintech;false
+10;European Luxury Goods Leader;Blue-chip stocks of major luxury-brand conglomerates;Equities;EUR;Long-Term;Consumer Discretionary;false
+11;Swiss Healthcare Technology Innovators;Equity in small-cap med-tech and biotech listed in Zurich;Equities;CHF;Long-Term;Healthcare / Biotechnology;false
+12;Brazilian Agribusiness Expansion;Leading producers of soy, sugarcane & ethanol;Equities;BRL;Long-Term;Agriculture;false
+13;NextGen AI & Robotics ETF;Broad exposure to global AI, robotics & automation companies;ETFs;USD;Medium-Term;Artificial Intelligence / Robotics;false
+14;Clean Energy Transition ETF;Tracks companies in wind, solar, hydrogen infrastructure;ETFs;USD;Medium-Term;Renewable Energy;false
+15;Asia-Pacific Semiconductor Equipment ETF;Firms supplying tools & materials to chip-makers in APAC;ETFs;USD;Medium-Term;Semiconductors;false
+16;European ESG Corporate Leaders ETF;High-ESG-scoring large-cap corporates across EU markets;ETFs;EUR;Medium-Term;ESG;false
+17;U.S. Dividend Aristocrats ETF;S&P companies with 25+ years of consecutive dividend increases;ETFs;USD;Medium-Term;Income / Blue-Chip;false
+18;Frontier Markets Infrastructure ETF;Utilities & transport assets in frontier economies;ETFs;USD;Medium-Term;Infrastructure;false
+19;Southeast Asia Growth Private Equity Fund;Early-stage tech & consumer startups in SEA;Private Equity;USD;Long-Term;Technology / Consumer;false
+20;Nordic Healthcare Venture Fund;Seed-to-Series-B investments in Scandinavian biotech;Private Equity;EUR;Long-Term;Biotechnology;false
+21;Latin America Digital Finance PE;Minority stakes in neobanks & insurtech platforms across LATAM;Private Equity;USD;Long-Term;Fintech;false
+22;Middle East Renewable Energy PE;Sponsor-led platform investing in solar & wind projects;Private Equity;USD;Long-Term;Renewable Energy;false
+23;African Consumer Tech Growth Fund;Series A-C investments in e-commerce & mobile services startups;Private Equity;USD;Long-Term;Consumer / Tech;false
+24;U.S. Lower-Middle Market Buyout;Leveraged buyouts of niche manufacturing & service companies;Private Equity;USD;Long-Term;Industrials;false
+25;Global Macro Opportunities Hedge Fund;Long/short positions across FX, rates & commodities driven by macro trends;Hedge Fund;USD;Short-Term;Multi-Strategy;false
+26;Equity Market Neutral Hedge Fund;Balanced long/short equity exposures with low beta;Hedge Fund;USD;Short-Term;Quantitative Strategies;false
+27;Asia Event-Driven Catalyst Fund;Focused on M&A arbitrage and spin-off opportunities;Hedge Fund;USD;Short-Term;Event-Driven;false
+28;Climate Commodity Arbitrage Fund;Exploits inefficiencies in carbon credits, timber & agricultural commodities;Hedge Fund;USD;Short-Term;Commodities / ESG;false
+29;Volatility Tail Risk Protection Fund;Options-based strategy to hedge against market drawdowns;Hedge Fund;USD;Short-Term;Derivatives;false
+30;Credit Relative Value Hedge Fund;Strategies targeting mispriced credit across investment grade and high yield;Hedge Fund;USD;Short-Term;Fixed Income / Credit;false
+31;Fidelity Technology Fund;An all-weather product in the global information technology industry, particularly suitable for investors looking for IT exposure with smoother volatility, a complementary exposure to the somewaht crowded US mega-cap Big Tech names.;Hedge Fund;EUR;Short-Term;Technology;false
+32;Broadcom;A unique profile with exposure to semiconductors ans software segments. Strategic positioning in products for artificial intelligence (AI) represents a significant opportunity for continued growth and market leadership.;Equities;USD;Long-Term;Technology;false

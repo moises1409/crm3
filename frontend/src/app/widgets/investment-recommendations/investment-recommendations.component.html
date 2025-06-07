@@ -1,0 +1,49 @@
+<div class="min-h-screen bg-background">
+    <div class="container mx-auto px-4 py-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Main content -->
+        <div class="lg:col-span-2 space-y-6">
+          <div class="card">
+            <div class="card-header pb-3 flex items-center justify-between">
+              <div>
+                <h2 class="card-title text-xl">Client Preferences</h2>
+                
+              </div>
+              <span class="star-icon">★</span>
+            </div>
+            <div class="card-content">
+              <p class="text-sm text-muted-foreground">
+                Client preferences from activity notes: {{preferences.activity_notes}}
+              </p>
+              <p class="text-sm text-muted-foreground">
+                Client suitability: {{preferences.suitability}}
+              </p>
+              <p class="text-sm text-muted-foreground">
+                Client investment constraint: {{preferences.constraint}}
+              </p>
+            </div>
+          </div>
+
+          <div class="products-grid">
+            <div class="product-card" *ngFor="let product of recommendations">
+              <!--img src="" alt="test" class="product-image"-->
+              <div class="product-details">
+                <h3 class="product-title">{{product.idea.title}}</h3>
+                <p class="product-description">{{product.idea.description}}</p>
+                <p class="product-description">{{product.llm_evaluation}}</p>
+                <p class="product-price"> {{ product.idea.asset_class }}</p>
+                <button class="add-to-cart-btn" type="button" *ngIf="!product.added" (click)="addToCart(product)">
+                  Add to Cart
+                </button>
+                <button class="added-btn" type="button" *ngIf="product.added">
+                  &#10003; Added
+                </button>
+                  
+              </div>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+  </div>
+  

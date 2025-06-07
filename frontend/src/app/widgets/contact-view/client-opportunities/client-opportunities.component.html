@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Opportunities</h2>
+    </div>
+  
+    <div class="card-content">
+      <div class="opportunity-list">
+        <div
+          class="opportunity-item"
+          *ngFor="let opp of opportunities; let last = last"
+        >
+          <div class="opp-header">
+            <h3 class="opp-title">{{ opp.title }}</h3>
+            <span class="badge" [ngClass]="statusClass(opp.status)">
+              {{ opp.status }}
+            </span>
+          </div>
+  
+          <p class="opp-desc">{{ opp.description }}</p>
+  
+          <div class="opp-meta">
+            <span>
+              Potential value:
+              <strong>{{ formatCurrency(opp.potentialValue) }}</strong>
+            </span>
+  
+            <ng-container *ngIf="opp.dueDate">
+              <span class="due-date">
+                <!-- simple calendar icon SVG -->
+                <svg
+                  class="icon-calendar"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M3 4h18M8 2v4M16 2v4M3 8h18v13H3z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                {{ formatDate(opp.dueDate) }}
+              </span>
+            </ng-container>
+          </div>
+  
+          <div class="next-steps" *ngIf="opp.nextSteps">
+            <div class="next-steps-title">Next Steps</div>
+            <p>{{ opp.nextSteps }}</p>
+          </div>
+  
+          <hr class="separator" *ngIf="!last"/>
+        </div>
+      </div>
+    </div>
+  </div>

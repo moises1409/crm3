@@ -1,0 +1,95 @@
+.card {
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  .card-header {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .card-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Content */
+  .card-content {
+    padding: 16px;
+  }
+  
+  /* Top stats grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .stats-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .stats-icon-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .icon {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+  }
+  .icon-primary {
+    color: #3b82f6; /* blue-500 */
+  }
+  .stats-label {
+    font-size: 0.875rem;
+    color: #6b7280;  /* gray-500 */
+  }
+  .stats-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  /* Allocation section */
+  .allocation-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .allocation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .allocation-item {
+    display: grid;
+    grid-template-columns: 1fr 4fr auto;
+    align-items: center;
+    gap: 8px;
+  }
+  .allocation-key {
+    font-size: 0.875rem;
+    text-transform: capitalize;
+  }
+  .allocation-bar {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .allocation-fill {
+    background: #3b82f6;
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  .allocation-percent {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+  

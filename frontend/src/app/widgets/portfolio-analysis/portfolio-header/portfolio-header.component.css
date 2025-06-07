@@ -1,0 +1,142 @@
+.portfolio-list-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    height: auto;
+    overflow-y: hidden;
+    box-shadow: border-box;
+    overflow-x: hidden;
+}
+
+.title-card {
+    background-color: #232325;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex; 
+    align-items: center; 
+    justify-content: left;
+}
+
+.title-card h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.portfolio-name-container {
+    display: flex;
+    align-items: center; 
+    margin-right: 20px;
+}
+
+.portfolio-icon {
+    font-size: 2rem;
+    color: #2980d9;
+    
+    vertical-align: middle;
+}
+
+.portfolio-header-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 0.5rem 2rem;
+    align-items: center;
+    justify-items: start;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.header-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.header-grid-label {
+    font-size: 0.8rem;
+    color: #aaa;
+    font-weight: 500;
+}
+
+.header-grid-value {
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.benchmark-container {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #bbb;
+    display: flex;
+    align-items: center;
+}
+
+.benchmark-label {
+    font-weight: 500;
+    margin-right: 6px;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+.benchmark-value {
+    font-weight: 400;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.portfolio-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.portfolio-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+.portfolio-number {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.portfolio-performance {
+  font-size: 1.2rem;
+  color: #4caf50;
+  font-weight: 500;
+}
+
+.benchmark-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  margin-left: 36px; /* aligns with portfolio-info */
+}
+
+.benchmark-label {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-right: 4px;
+}
+
+.benchmark-number {
+  font-size: 1rem;
+  color: #bbb;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.benchmark-performance {
+  font-size: 0.95rem;
+  color: #2196f3;
+  font-weight: 500;
+}

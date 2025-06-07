@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body, html, .card, .card * {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', 'Roboto', 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  background: black;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+p, span, button  {
+    font-size:0.9rem;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.app-root,  /* or whatever your topmost selector is */
+.container {
+  margin-top: 64px; /* match your header height */
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

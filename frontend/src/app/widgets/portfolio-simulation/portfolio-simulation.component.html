@@ -1,0 +1,88 @@
+<div class="dashboard-card">
+  <div class="card-header">
+    <div class="card-title">Simulation Summary</div>
+    <div class="card-description">Summary of selected investments and positions to sell</div>
+  </div>
+  <div class="card-content">
+    <div class="grid-cols-container">
+      <!-- Buying -->
+      <div class="accent-container">
+        <h3 class="section-title buying">
+          <svg class="icon buying-icon" viewBox="0 0 24 24"><polyline points="6 17 13 10 18 15"></polyline><polyline points="13 10 13 21 13 10"></polyline></svg>
+          Buying
+        </h3>
+        <ng-container *ngIf="recommendations?.length; else noBuy">
+          <ul class="investment-list">
+            <li *ngFor="let ticker of recommendations" class="row">
+              <div>
+                <span class="font-medium">{{ ticker.idea.title }}</span>
+                
+              </div>
+              <span class="allocation-badge">
+                {{ticker.percentOfPortfolio}}%
+              </span>
+            </li>
+          </ul>
+        </ng-container>
+        <ng-template #noBuy>
+          <p class="text-sm text-muted-foreground">No investments selected</p>
+        </ng-template>
+      </div>
+      <!-- Selling -->
+      <div class="accent-container">
+        <h3 class="section-title selling">
+          <svg class="icon selling-icon" viewBox="0 0 24 24"><polyline points="6 7 13 14 18 9"></polyline><polyline points="13 14 13 3 13 14"></polyline></svg>
+          Selling
+        </h3>
+        <ng-container *ngIf="positions?.length; else noSell">
+          <ul class="sell-list">
+            <li *ngFor="let ticker of positions" class="row">
+              <div>
+                <span class="font-medium">{{ ticker.name }}</span>
+                <span class="ml-2 text-sm text-muted-foreground">
+                  {{ ticker.name || 'Position' }}
+                </span>
+              </div>
+              <span class="allocation-badge">
+                {{ ticker.percentOfPortfolio }}%
+              </span>
+              
+            </li>
+            <!--li class="row proceeds-total">
+              <span class="font-medium">Total Proceeds</span>
+              <span class="font-medium">
+                $10000
+              </span>
+            </li-->
+          </ul>
+        </ng-container>
+        <ng-template #noSell>
+          <p class="text-sm text-muted-foreground">No positions selected to sell</p>
+        </ng-template>
+      </div>
+    </div>
+    <!-- Impact -->
+    <div class="impact-panel">
+      <h3 class="impact-title">
+        <svg class="mr-2 icon impact-arrow" viewBox="0 0 24 24"><polyline points="5 12 19 12"></polyline><polyline points="12 5 19 12 12 19"></polyline></svg>
+        Expected Impact
+      </h3>
+      <p class="impact-desc">
+        This reallocation will reduce equities exposure from 45% to 40% (matching benchmark) 
+        and increase fixed income from 30% to 35%, addressing the client's concerns 
+        about market volatility while maintaining long-term growth potential.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="dashboard-card">
+  <div class="card-header">
+    <div class="card-title">Simulation Summary</div>
+    <div class="card-description">Summary of selected investments and positions to sell</div>
+  </div>
+  <div class="card-content">
+    <app-assets-breakdown [portfolio]="portfolio" [benchmark]="benchmark" [simulation]="simulation"></app-assets-breakdown>
+  </div>
+</div>
+

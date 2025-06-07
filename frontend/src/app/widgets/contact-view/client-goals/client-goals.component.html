@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Goals</h2>
+    </div>
+  
+    <div class="card-content">
+      <div class="goals-list">
+        <div *ngFor="let goal of goals" class="goal-item">
+          <!-- Goal title + status -->
+          <div class="goal-header">
+            <h3 class="goal-name">{{ goal.name }}</h3>
+            <span class="goal-status" [ngClass]="getStatusClass(goal.status)">
+              {{ goal.status }}
+            </span>
+          </div>
+  
+          <!-- Target amount + date -->
+          <div class="goal-details">
+            <span>Target: {{ formatCurrency(goal.targetAmount) }}</span>
+            <span>By {{ formatDate(goal.targetDate) }}</span>
+          </div>
+  
+          <!-- Progress bar + info -->
+          <div class="goal-progress">
+            <div class="progress-bar">
+              <div
+                class="progress-fill"
+                [style.width.%]="getProgressPercent(goal)"
+              ></div>
+            </div>
+            <div class="progress-info">
+              <span>Current: {{ formatCurrency(goal.currentAmount) }}</span>
+              <span>{{ getProgressPercent(goal) }}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

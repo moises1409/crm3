@@ -1,0 +1,35 @@
+<app-contact-header [contact]="contact"></app-contact-header>
+
+<div class="main-section">
+  <div class="main-row">
+    <div class="main-section-card">
+      <div class="main-section-card-header">
+        <app-risk-assessment [risks]="contact.risks"></app-risk-assessment>
+      </div>
+    </div>
+    <div class="main-section-card">
+      <div class="main-section-card-header">
+        <app-client-wealth></app-client-wealth>
+      </div>
+    </div>
+    <div class="main-section-card">
+      <div class="main-section-card-header">
+        <app-client-goals [goals]="contact.goals"></app-client-goals>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="main-row">
+    <div class="main-section-card">
+      
+      <app-client-opportunities [opportunities]="contact.opportunities"></app-client-opportunities>
+    </div>
+    <div class="main-section-card">
+      <div class="main-section-card-header">
+        <app-client-activities [activities]="contact.activities"></app-client-activities>
+      </div>
+    </div>
+    
+  </div>
+</div>

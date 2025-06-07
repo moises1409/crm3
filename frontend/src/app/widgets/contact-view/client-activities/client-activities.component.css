@@ -1,0 +1,122 @@
+
+.card {
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .card-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  /* Timeline container */
+  .interactions-content {
+    max-height: 350px;
+    overflow-y: auto;
+    position: relative;
+    
+  }
+  
+  .interaction-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    left: 0.75rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #b8bbbe;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: 0.375rem;
+    top: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid #3b82f6;
+    background: #434141;
+    border-radius: 50%;
+    
+  }
+  
+  .interaction-body {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .interaction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .date {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .interaction-type {
+    background: #4d4d4e;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+  }
+  
+  .interaction-summary {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  
+  .interaction-docs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .doc-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: #4d4d4e;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+  }
+  
+  .icon-calendar,
+  .icon-file-text {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+  }
+  
+  .follow-up {
+    font-size: 0.75rem;
+    color: #d97706;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }

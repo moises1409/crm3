@@ -1,0 +1,46 @@
+.shell-container {
+  height: 100vh;
+  background: #181a20;
+}
+
+.side-menu {
+  width: 64px;
+  background: #263238;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+
+  button {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.shell-content {
+  padding: 24px;
+  position: relative;
+  background: transparent;
+}
+
+.chatbot {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Hidden by default */
+  width: 400px;
+  height: 100vh;
+  background: #fafafa;
+  box-shadow: -2px 0 8px rgba(0,0,0,.15);
+  transition: right 0.3s cubic-bezier(.25, .8, .25, 1);
+  z-index: 1500;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+
+  &.open {
+    right: 0; /* Slide in fully */
+  }
+
+  
+}

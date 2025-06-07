@@ -1,0 +1,28 @@
+<mat-sidenav-container class="shell-container" autosize>
+
+  <!-- Left Menu -->
+  <mat-sidenav mode="side" opened class="side-menu">
+    <nav>
+      <button mat-icon-button><mat-icon>home</mat-icon></button>
+      <button mat-icon-button><mat-icon>dashboard</mat-icon></button>
+      <button mat-icon-button><mat-icon>settings</mat-icon></button>
+      <!-- Add more menu items -->
+    </nav>
+  </mat-sidenav>
+
+  <!-- Main Content & Header -->
+  <mat-sidenav-content>
+    <!-- Header Component -->
+    <app-header [userName]="userName" (toggleChatbot)="toggleChatbot()"></app-header>
+    <!-- Main Content Projection -->
+    <div class="shell-content">
+      <app-contact-view></app-contact-view>
+    </div>
+    <aside *ngIf="chatbotOpen" class="chatbot" [class.open]="chatbotOpen">
+      <app-text-chat (toggleChatbot)="toggleChatbot()"></app-text-chat>
+    </aside>
+    
+  </mat-sidenav-content>
+ 
+
+</mat-sidenav-container>

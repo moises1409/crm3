@@ -1,0 +1,29 @@
+<div class="portfolio-list-container">
+  <div class="title-card">
+    <div class="portfolio-name-container">
+        <span class="material-icons portfolio-icon">account_balance</span>
+    </div>
+    <!-- Portfolio Row -->
+    <div class="portfolio-header-grid"> 
+      <div class="header-grid-item">
+        <div class="header-grid-label">Account</div>
+        <div class="portfolio-number">{{ portfolio.portfolioNumber }}</div>
+        <div class="benchmark-label">Benchmark: {{ benchmark.portfolioNumber }}</div>
+      </div>
+    </div>
+    <div class="portfolio-header-grid">
+      <div class="header-grid-item">
+        <div class="header-grid-label">Valuation</div>
+        <div class="portfolio-number">{{ portfolio.valuation }} CHF</div>
+        <div class="benchmark-label">{{ portfolio.valuation}}CHF</div>
+      </div> 
+    </div> 
+    <div class="portfolio-header-grid">
+      <div class="header-grid-item">
+        <div class="header-grid-label">TW Performance</div>
+        <div class="portfolio-number">{{ portfolio.performance }} %</div>
+        <div class="benchmark-label">{{ benchmark.performance}} %</div>
+      </div> 
+    </div>    
+  </div>
+</div>

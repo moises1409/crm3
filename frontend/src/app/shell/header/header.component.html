@@ -1,0 +1,16 @@
+<!-- Header -->
+    <header class="shell-header">
+      <div class="header-left">
+        <img src="assets/avatar.png" alt="avatar" class="avatar" />
+        <span class="username">{{ userName }}</span>
+      </div>
+      <div class="header-right">
+        <button mat-icon-button aria-label="Show notifications">
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Open chatbot" (click)="onToggleChatbot()">
+          <mat-icon>chat</mat-icon>
+        </button>
+      </div>
+    </header>
+

@@ -1,0 +1,96 @@
+.dashboard-card {
+  background: #181818;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px #0001;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.card-header {
+  margin-bottom: 1rem;
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.card-description {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.card-content {
+  margin-top: 0.5rem;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+th.text-right, td.text-right {
+  text-align: right;
+}
+.font-medium {
+  font-weight: 500;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.ml-1 {
+  margin-left: 0.25rem;
+}
+.h-4 { height: 1rem; }
+.w-4 { width: 1rem; }
+
+/* Badge styles */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #fff;
+}
+.badge-underweight {
+  background: hsl(355, 90%, 60%);
+}
+.badge-consider-selling {
+  background: #f59e42;
+  color: #fff;
+}
+.badge-neutral {
+  background: #bababa;
+  color: #222;
+}
+.text-xs {
+  font-size: 0.8em;
+}
+.text-muted-foreground {
+  color: #888;
+}
+
+/* Color highlight for proximity, you can adjust these */
+.uw-badge { color: hsl(355, 90%, 60%); }
+.uw-badge-light { color: hsl(355, 90%, 60%, 0.8); }
+.amber-badge { color: #f59e42; }
+.ow-badge { color: hsl(155, 80%, 35%); }
+
+.select-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+.selected-btn {
+  background-color: #4caf50;
+  color: #fff;
+}
