@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+
 
 interface Flows {
   inflows: number;
@@ -9,7 +11,7 @@ interface Flows {
 @Component({
   selector: 'app-opportunities-overview',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './opportunities-overview.component.html',
   styleUrl: './opportunities-overview.component.css'
 })

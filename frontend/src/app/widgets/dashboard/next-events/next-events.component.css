@@ -1,0 +1,68 @@
+.card {
+  font-family: 'Inter', Arial, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  
+}
+
+.card-header {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.card-title {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.p-3 { padding: 0.75rem; }
+.rounded-lg { border-radius: 0.75rem; }
+.border-l-4 { border-left-width: 4px; }
+
+.flex { display: flex; }
+.flex-1 { flex: 1 1 0%; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-between { justify-content: space-between; }
+
+.gap-2 { gap: 0.5rem; }
+.gap-1 { gap: 0.25rem; }
+.gap-4 { gap: 1rem; }
+.mb-1 { margin-bottom: 0.25rem; }
+
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.font-medium { font-weight: 500; }
+
+.bg-secondary { background: #f5f7fa; }
+.rounded-full { border-radius: 9999px; }
+.text-muted-foreground { color: #64748b; }
+
+/* Event Type Classes */
+.event-client {
+  border-left-color: #3b82f6 !important;
+  background-color: #eff6ff;
+}
+.event-team {
+  border-left-color: #10b981 !important;
+  background-color: #ecfdf5;
+}
+.event-company {
+  border-left-color: #a21caf !important;
+  background-color: #faf5ff;
+}
+.event-default {
+  border-left-color: #6b7280 !important;
+  background-color: #f3f4f6;
+}

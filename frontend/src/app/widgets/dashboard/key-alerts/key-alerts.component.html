@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-title flex items-center gap-2">
+      <!-- Bell icon SVG (Lucide) -->
+      <svg width="20" height="20" class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/>
+        <path d="M13.73 21a2 2 0 01-3.46 0"/>
+      </svg>
+      Key Alerts
+    </div>
+  </div>
+  <div class="card-content">
+    <div class="space-y-3">
+      <div *ngFor="let alert of alerts"
+           class="p-3 rounded-lg border-l-4"
+           [ngClass]="getPriorityClasses(alert.priority)">
+        <div class="flex justify-between items-start">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-sm font-medium">{{alert.type}}</span>
+              <span class="text-xs text-muted-foreground">•</span>
+              <span class="text-xs font-medium">{{alert.client}}</span>
+            </div>
+            <p class="text-sm text-muted-foreground">{{alert.message}}</p>
+          </div>
+          <span class="text-xs font-medium text-muted-foreground">{{alert.date}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
