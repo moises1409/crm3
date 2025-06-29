@@ -1,0 +1,70 @@
+<!-- Card wrapper -->
+<div class="card">
+  <!-- Header -->
+  <div class="card-header pb-4">
+    <div class="card-title flex items-center gap-2 text-lg">
+      <!-- User icon (SVG inline or from icon lib) -->
+      <svg class="icon" height="20" width="20" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="10" cy="7" r="4" />
+        <path d="M2 18c0-2.667 3.333-4 8-4s8 1.333 8 4"/>
+      </svg>
+      Contacts Overview
+    </div>
+  </div>
+
+  <div class="card-content space-y-4">
+    <!-- Total Contacts & YTD -->
+    <div class="text-center p-3 bg-secondary rounded-lg">
+      <div class="text-2xl font-bold text-foreground">{{ totalContacts }}</div>
+      <div class="text-sm text-muted-foreground">Total Contacts</div>
+      <div class="flex items-center justify-center gap-1 mt-1">
+        <ng-container *ngIf="ytdGrowth >= 0; else down">
+          <!-- Up arrow SVG -->
+          <svg class="icon text-green-600" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="3 7 6 4 9 7"/>
+            <line x1="6" y1="4" x2="6" y2="10"/>
+          </svg>
+        </ng-container>
+        <ng-template #down>
+          <!-- Down arrow SVG -->
+          <svg class="icon text-red-600" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="3 5 6 8 9 5"/>
+            <line x1="6" y1="8" x2="6" y2="2"/>
+          </svg>
+        </ng-template>
+        <span [ngClass]="ytdGrowth >= 0 ? 'text-green-600' : 'text-red-600'" class="text-xs font-medium">
+          {{ ytdGrowth >= 0 ? '+' : '' }}{{ ytdGrowth }}% YTD
+        </span>
+      </div>
+    </div>
+
+    <!-- Distribution controls -->
+    <div class="flex justify-center gap-2">
+      <button
+        *ngFor="let criteria of ['type','segment', 'age', 'domicile']"
+        type="button"
+        (click)="setCriteria(criteria)"
+        class="px-2 py-1 text-xs rounded-full transition-colors"
+        [ngClass]="distributionCriteria === criteria
+          ? 'bg-primary text-primary-foreground'
+          : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'">
+        {{ criteria.charAt(0).toUpperCase() + criteria.slice(1) }}
+      </button>
+    </div>
+
+    <!-- Pie Chart or Chart Placeholder: -->
+    <div >
+        <canvas
+            baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [type]="'pie'"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+            style="max-height: 160px; width: 100%;"
+        ></canvas>
+    </div>
+
+    
+  </div>
+</div>

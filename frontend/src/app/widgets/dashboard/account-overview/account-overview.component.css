@@ -1,0 +1,188 @@
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  color: #fff;
+  overflow: hidden;
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0 auto;
+    
+}
+
+.card-header {
+  padding: 20px 24px 0 24px;
+  
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-content {
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.bg-secondary {
+  background: #2d323c;
+}
+
+.rounded-lg {
+  border-radius: 8px;
+}
+
+.text-foreground { color: #fff; }
+.text-muted-foreground { color: #b0b6c3; }
+.text-green-600 { color: #22c55e; }
+.text-red-600 { color: #ef4444; }
+.bg-primary { background-color: #3b82f6; }
+.text-primary-foreground { color: white; }
+.bg-secondary {
+  background-color: #353536;
+}
+.text-secondary-foreground { color: #475569; }
+.chart-wrapper { height: 160px; min-height: 120px;}
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.icon {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.bg-green-50 {
+  background-color: #ecfdf5;
+}
+
+.bg-red-50 {
+  background-color: #fef2f2;
+}
+
+.bg-blue-50 {
+  background-color: #eff6ff;
+}
+
+.text-green-700 {
+  color: #15803d;
+}
+
+.text-red-700 {
+  color: #b91c1c;
+}
+
+.text-blue-700 {
+  color: #1d4ed8;
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}

@@ -17,6 +17,7 @@
     <!-- Main Content Projection -->
     <div class="shell-content">
       <!--app-contact-view></app-contact-view-->
+      <app-dashboard></app-dashboard>
     </div>
     <aside *ngIf="chatbotOpen" class="chatbot" [class.open]="chatbotOpen">
       <app-text-chat (toggleChatbot)="toggleChatbot()"></app-text-chat>

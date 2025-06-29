@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { TextChatComponent } from './text-chat/text-chat.component';
 import { ContactViewComponent } from '../widgets/contact-view/contact-view.component';
+import { DashboardComponent } from '../widgets/dashboard/dashboard.component';
 
 @Component({
   selector: 'app-shell',
@@ -14,7 +15,7 @@ import { ContactViewComponent } from '../widgets/contact-view/contact-view.compo
   imports: [MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule,CommonModule, HeaderComponent, TextChatComponent, ContactViewComponent],
+    MatToolbarModule,CommonModule, HeaderComponent, TextChatComponent, DashboardComponent],
   templateUrl: './shell.component.html',
   styleUrl: './shell.component.css'
 })
